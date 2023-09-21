@@ -15,11 +15,12 @@ class Reporter(object):
         '''
         Constructor
         '''
-        self._file = open('logs/report.txt','w') 
-        self._file.write('\n')
+        self._file = open('files/report.txt','a') 
+        # self._file.write('\n')
         
     def append_to_report(self, report_line):
         self._file.write(report_line + '\n')
+        # print(report_line)
         return None
     
     def close_file(self):
